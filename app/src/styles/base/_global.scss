@@ -1,0 +1,104 @@
+// Global CSS goes here
+
+/**
+* Page skeleton
+**/
+
+body {
+	color: white;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-weight: 100;
+}
+
+h2 {
+	color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 35px 15px;
+
+    img {
+	    width: 50px;
+	    margin-right: 25px;
+    }
+}
+
+section {
+	position: relative;
+    padding-bottom: 50px;
+}
+
+
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%,-50%));
+}
+
+
+.fontAwesome {
+	font-family: 'fontAwesome';
+}
+
+.facebook {
+	&:after {
+		content: "\f09a";
+	}
+}
+
+.twitter {
+	&:after {
+		content: "\f099";
+	}
+}
+
+.youtube {
+	&:after {
+		content: "\f16a";
+	}
+}
+
+.google {
+	&:after {
+		content: "\f0d5";
+	}
+}
+
+.linkedin {
+	&:after {
+		content: "\f0e1";
+	}
+}
+
+.earth {
+	&:after {
+		content: "\f0ac";
+	    position: absolute;
+	    font-size: 2em;
+	    top: 20px;
+	}
+}
+
+.search {
+	color: black;
+
+	&:after {
+		content: "\f002";
+		font-size: 2em;
+	}
+
+	&:hover {
+		color: #003caf;
+	}
+}
+
+

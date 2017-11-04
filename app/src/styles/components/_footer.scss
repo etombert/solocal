@@ -1,0 +1,34 @@
+footer {
+	background-color: #282828;
+    padding: 60px 0px 20px;
+
+	.footer-list {
+		display: flex;
+		justify-content: space-around;
+
+		a {
+			font-weight: 400;
+		}
+	}
+
+	small {
+	    display: block;
+	    text-align: right;
+	    padding: 50px;
+	    font-weight: lighter;
+	}
+
+	ul {
+		line-height: 2.5;
+		font-size: 0.86em;
+	}
+
+	.footer-social {
+		display: flex;
+
+		li {
+			margin: 0 15px !important;
+			font-size: 2em;
+		}
+	}
+}
