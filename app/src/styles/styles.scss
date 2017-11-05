@@ -2,7 +2,6 @@
 
 @import 'base/normalize';
 @import 'base/global';
-@import 'base/responsive';
 
 // Import Components
 @import 'components/header';
@@ -13,3 +12,6 @@
 
 // Import Plugins
 @import 'plugins/plugin';
+
+// Resp
+@import 'base/responsive';

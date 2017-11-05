@@ -1,12 +1,75 @@
-section {
+.hideme {
+    opacity:0;
+    @include transform(translate(0%,25%));
+    @include transition(all 1s ease-in-out);
+}
 
+.showme {
+    opacity:1;
+    @include transform(translate(0%,0%) !important);
+}
+
+.section-top {
+	background-image: url(../../src/images/slider1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 100px;
+
+	h2 {
+		font-size: 3em;
+		line-height: 1.1;
+		padding: 195px 220px;
+		font-weight: 100;
+		color: white;
+		position: relative;
+		z-index: 10;
+	}
+
+	&:after {
+		content: "";
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0,0,0,.5);
+	    z-index: 5;
+	}
+}
+
+.section-bis {	
+	.section-bis_pst {
+		color: black;
+		display: flex;
+	    justify-content: space-evenly;
+	    text-align: center;
+	    flex-wrap: wrap;
+
+	    width: 100%;
+	    max-width: 1050px;
+	    margin: auto;
+
+		article {
+		    width: 300px;
+		    margin: 25px;
+
+		    img {
+		    	width: 100%;
+		    }
+		}
+
+		h3 {
+			font-size: 1.3em;
+			padding: 10px 0;
+		}
+	}
 }
 
 .section-1 {
+    padding-top: 60px;
 	padding-bottom: 0;
 	h3 {
 		font-size: 3em;
-		line-height: 1;
+		line-height: 1.1;
 		padding: 0 220px;
 		font-weight: 100;
 	}
@@ -57,22 +120,26 @@ section {
 	.section-3_bloc1 {
 		position: relative;
 		width: 50%;
-		height: 500px;
 		background-color: #9114a5;
 	}
 
 	.section-3_bloc2 {
 		position: relative;
 		width: 50%;
-		height: 500px;
 		background-color: #78c200;		
+	}
+
+	.section-3_bloc1-container,
+	.section-3_bloc2-container {
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+		padding: 50px 0;
 	}
 
 	.section-3_bloc1-text,
 	.section-3_bloc2-text {
-		@extend .center;
-		width: 100%;
-		max-width: 600px;
+	    padding: 0 30px;
 	}
 
 	h3 {
@@ -99,7 +166,7 @@ section {
 		justify-content: space-between;
 
 		a {
-		    width: 250px;
+		    width: 230px;
 		    display: block;
 		    text-align: center;
 		    text-transform: uppercase;
@@ -111,12 +178,12 @@ section {
 	}
 
 	.link1 {
-		a:first-child() {
+		a:nth-child(1) {
 	    	background: #720d82;			
 		}
 	}
 	.link2 {
-		a:first-child() {
+		a:nth-child(1) {
 	    	background: #fff;	
 	    	color: #78c200;		
 		}
@@ -146,7 +213,8 @@ section {
 
 .section-5 {
 	background: url(../../src/images/slider4.jpg);
-	height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 	&:after {
 		content: "";
@@ -159,11 +227,16 @@ section {
 		z-index: 1;
 	}
 
-	.section-5_text {
-		@extend .center;
+	.section-5_container {
+		// @extend .center;
+		position: relative;
 	    width: 100%;
 	    max-width: 1000px;
 	    z-index: 10;
+	}
+
+	.section-5_text {
+		padding: 100px 50px 0;
 	}
 
 	h3 {
@@ -181,34 +254,39 @@ section {
 
 	p {
 		padding: 60px 0;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		font-weight: 100;
 		line-height: 1.2;
 	}
 
 	.section-5_links {
 		display: flex;
+
+		a {
+		    width: 250px;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    text-align: center;
+		    text-transform: uppercase;
+		    font-weight: 400;
+		    letter-spacing: .5px;
+		    padding: 25px 15px;
+		    font-size: .8em;
+		    line-height: 1.5;
+
+		    &:hover {
+			    background: #003caf;
+		    }
+		}
+
+		.a-active {
+			background: #003caf;
+			margin-right: 25px;
+		}
 	}
 
-	a {
-	    width: 250px;
-	    display: block;
-	    text-align: center;
-	    text-transform: uppercase;
-	    font-weight: 400;
-	    letter-spacing: .5px;
-	    padding: 25px 15px;
-	    font-size: .8em;
 
-	    &:first-child() {
-		    background: #003caf;
-		    margin-right: 25px;
-	    }
-
-	    &:hover {
-		    background: #003caf;
-	    }
-	}
 }
 
 .section-6 {
@@ -216,6 +294,7 @@ section {
 	    display: flex;
 	    justify-content: space-evenly;
 	    align-items: center;
+        padding: 20px 0 0;
 
 		img {
 		    width: 160px;
@@ -234,8 +313,11 @@ section {
 	    display: flex;
 	    justify-content: space-around;
 	    background: black;
-	    padding: 40px 35px;
 	    line-height: 1.4;
+	}
+
+	.section-7_market_bloc {
+	    padding: 40px 20px;		
 	}
 
 	p {
@@ -253,11 +335,22 @@ section {
 }
 
 .section-8 {
-	.section-8_slider {
+	.brands-slider {
+	    margin: auto;
 	    display: block;
+	    width: 100%;
+	    max-width: 800px;
+	}
+
+	.section-8_slider {
+	    display: none;
 	    margin: auto;
 	    width: 100%;
 	    max-width: 700px;
+
+	    img {
+	    	width: 100px;
+	    }
 	}
 }
 

@@ -35,6 +35,16 @@ $bubble-combo-size: 450px;
 $login-bubble-size: 450px;
 
 
+.light-text {
+	font-family: 'titillium_web', Verdana, Arial, sans-serif;
+	font-weight: 200;
+}
+.normal-text {
+	font-family: 'titillium_web', Verdana, Arial, sans-serif;
+}
+.awesome {
+	font-family: "FontAwesome";
+}
 
 .fin, .light, .lighter  { 
 	font-family: 'titillium_web';
@@ -48,16 +58,6 @@ $login-bubble-size: 450px;
 *
 */
 
-.light-text {
-	font-family: 'titillium_web', Verdana, Arial, sans-serif;
-	font-weight: 200;
-}
-.normal-text {
-	font-family: 'titillium_web', Verdana, Arial, sans-serif;
-}
-.awesome {
-	font-family: "FontAwesome";
-}
 
 @mixin gradient($startColor: #eee, $endColor: white)
 {

@@ -1,17 +1,26 @@
 header {
-	display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    padding: 10px 0;
-
     position: fixed;
     z-index: 100000;
     width: 100%;
     top: 0;
     left: 0;
 
+    nav {
+        box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.3);
+    }
+
+
+    // NAV 1
+    .nav-1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+    }
+
     .logo {
+        position: relative;
+        z-index: 100;
     	img {
     		display: block;
 		    width: 125px;
@@ -23,9 +32,31 @@ header {
     	align-items: center;
     }
 
-    li {
-    	margin: 0 20px;
+    li.li-first {
+    	padding: 17px 20px;
     	font-size: 0.7em;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        border-bottom: 5px solid transparent;
+
+        &:hover {
+            border-bottom: 5px solid black;
+        }
+    }
+
+    .lang-fr {
+        padding-right: 20px;
+    }
+
+    .search-icon {
+        a {
+            padding-left: 20px;
+        }
+
+        &:hover {
+            border-bottom: 5px solid transparent !important;
+        }
     }
 
 	span.earth {
@@ -38,11 +69,8 @@ header {
     	font-weight: bold;
     	color: black;
 
-    	@include transition(all 0.2s ease-in-out);
+    	@include transition(all 0.1s ease-in-out);
 
-    	&:hover {
-    		color: #003caf;
-    	}
     }
 
     .active {
@@ -52,7 +80,7 @@ header {
     .search-bar {
 	    position: absolute;
 	    left: 0;
-	    top: 63px;
+	    top: 85px;
 	    z-index: 10;
 	    width: 100%;
 	    // color: black;
@@ -72,4 +100,118 @@ header {
 	    }
     }
 
+    .search-icon {
+        border-left: 1px solid black;
+        height: 0px !important;
+    }
+
+    .hover-header {
+        background: #000;
+        width: 100%;
+        position: absolute;
+        top: 82px;
+        z-index: -1;
+        left: 0;
+        padding: 50px 75px;
+        display: flex;
+        color: white;
+
+        a {
+            color: white;
+        }
+
+        ul {
+            display: block;
+            line-height: 2.5;
+
+            li {
+                cursor: pointer;
+                padding: 0 20px;
+                @include transition(all 0.1s ease-in-out);
+            }
+
+            a {
+                font-size: 1.5em;
+                text-transform: initial;
+                font-weight: 400;
+            }
+        }
+
+        .ul-first {
+            margin: 0 30px 0 60px;
+            width: 200px;
+        }
+
+        .paragraph {
+            width: 100%;
+            max-width: 600px;
+
+            h3 {
+                font-size: 1.7em;
+            }
+
+            p {
+                padding: 30px 0 50px;
+                line-height: 1.4;
+                font-weight: 100;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .hover-group, .hover-clients {
+        display: none;
+    }
+
+    .group:hover .hover-group {
+        display: flex;
+    }
+
+    .clients:hover .hover-clients {
+        display: flex;
+    }
+
+    // NAV 2
+    .nav-2 {
+        display: none;
+    }
+
+    .nav-items {
+        background: rgba(255, 255, 255, 0.97);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: table;
+        text-align: center;
+        height: 100%;
+
+        display: none;
+
+        ul {
+            display: block;
+            width: 100%;
+            @extend .center;
+        }
+
+        .earth {
+            margin-right: 0;
+
+            &:after {
+                // position: static;
+            }            
+        }
+
+
+        li.li-first {
+            height: auto;
+            text-align: center;
+            display: block;
+            position: relative;
+            font-size: .8125em;
+        }
+    }
+
 }
+

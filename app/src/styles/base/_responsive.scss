@@ -1,0 +1,303 @@
+@media screen and (max-width: 1010px) {
+	header {
+		.nav-1 {
+			display: none !important;
+		}
+
+	    // NAV 2
+	    .nav-2 {
+	        background: #fff;
+	        width: 100%;
+	        height: 60px;
+	        display: flex !important;
+	        justify-content: space-between;
+	        align-items: center;
+
+	        .logo {
+	        	img {
+	        		width: 100px !important;        		
+	        	}
+	        }
+
+	        .nav-container {
+	            display: flex;
+	            justify-content: space-between;
+	            align-items: center;
+	            width: 100%;
+	            padding: 0 20px;
+	        }
+
+	        .burger-menu {
+	            position: relative;
+	            top: 4px;
+	            width: 35px;
+	            height: 50px;
+	            cursor: pointer;
+	            margin-left: 0;
+	            margin-right: 0;
+	            z-index: 100;
+	        }
+	        .burger {
+				position: absolute;
+				background: black;
+				width: 100%;
+				height: 3px;
+				top: 50%;
+				right: 0px;
+				margin-top: -5px;
+				opacity: 1;
+	        }
+	        .burger::before {
+				position: absolute;
+				background: black;
+				width: 35px;
+				height: 3px;
+				top: 10px;
+				content: "";
+				display: block;
+	        }
+	        .burger::after {
+				position: absolute;
+				background: black;
+				width: 35px;
+				height: 3px;
+				bottom: 10px;
+				content: "";
+				display: block;
+	        }
+	        .burger::after, .burger::before, .burger {
+				transition: all .3s ease-in-out;
+				-webkit-transition: all .3s ease-in-out;
+	        }
+	        .burger-menu.menu-on .burger::after{
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				bottom: 0px;
+	        }
+	        .burger-menu.menu-on .burger::before{
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				top: 0px;
+	        }
+	        .burger-menu.menu-on .burger{
+				background: rgba(111,111,111,.0);
+	        }
+	    }
+
+	}
+
+	.section-top {
+		h2 {
+		    font-size: 2.5em;
+		    line-height: 1.1;
+		    padding: 100px 50px;
+		    font-weight: 100;
+		}		
+	}
+
+	.section-3 {
+		display: block;
+	    text-align: center;
+
+		.section-3_bloc1 {
+			width: 100%;
+		}
+		.section-3_bloc2 {
+			width: 100%;
+		}
+	}
+
+	.section-6 {
+		.section-6_partners {
+			img {
+				width: 100px;
+			}
+		} 
+	} 
+
+	.section-8 {
+		.brands-slider {
+			display: none;
+		}
+		.section-8_slider {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			img {
+			    width: 100px;
+			    margin-top: 50px;
+			}
+		}
+	}
+
+	footer {
+		.footer-list {
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+
+		ul {
+		    line-height: 3;
+		    font-size: 0.96em;
+		}
+
+		.footer-social {
+			justify-content: center;
+		}
+
+		small {
+			text-align: center;
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 768px) {
+	.section-1, {
+		h3 {
+		    font-size: 2.5em;
+		    line-height: 1.1;
+		    padding: 0 50px;
+		    font-weight: 100;
+		}		
+	}
+
+	.section-3 {
+		.section-3_links {
+		    line-height: 1.5;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+
+		    a {
+		    	width: 200px;
+		    }
+		}
+	}
+
+	.section-4 {
+		.section-4_img {
+			flex-direction: column;
+			line-height: 1.5;
+
+			img {
+				margin: 20px 25px;
+
+				&:nth-child(1) {
+				    margin: 0px 25px 20px 25px;
+				}
+			}
+		}
+	} 
+
+	.section-5 {
+		.section-5_text {
+		    text-align: center;
+		}
+
+		span {
+			margin: auto;
+		}
+	}
+
+	.section-6 {
+		.section-6_partners {
+		    flex-direction: column;
+
+			img {
+				margin: 20px 25px;
+
+				&:nth-child(1) {
+				    margin: 0px 25px 20px 25px;
+				}
+			}
+
+		}
+	}
+
+	.section-7 {
+		.section-7_market {
+		    max-width: 100%;
+		}
+
+		p {
+		    font-size: 2em;
+		}
+	}
+
+	.section-8 {
+		.section-8_slider {
+		    img {
+		    	&:nth-child(1) {
+	    		    margin-top: 0;
+		    	}
+		    }
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 500px) {
+	.section-1 {
+		h3 {
+		    font-size: 1.7em;
+		}
+	}
+
+	.section-top {
+		h2 {
+		    font-size: 1.7em;
+		    text-align: center;
+		}		
+	}
+
+	.section-3 {
+		span {
+		    font-size: 1.5em;
+		}
+
+		.section-3_links {
+		    flex-direction: column;
+
+		    a {
+	    	    width: 100%;
+		    }
+		}
+	}
+
+	.section-5 {
+		.section-5_links {
+		    flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+
+		    a {
+		    	width: 100%;
+		    }
+
+		    .a-active {
+		    	margin-right: 0;
+		    }
+		}
+
+		span {
+			font-size: 2.5em;
+		}
+
+		p {
+		    font-size: 1.1em;
+		}
+
+		.section-5_text {
+		    padding: 100px 15px 0;
+		}
+	}
+}
+
+
+
